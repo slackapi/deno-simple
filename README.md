@@ -1,7 +1,7 @@
-# Next-gen Slack platform project template - Reverse String
+# Next-gen Slack platform project template - Simple Demo using Reverse String
 This repo contains a sample project and embedded lightweight SDK of a Typescript based project for the new Deno runtime. 
 
-The main file that brings it all together is the `project.ts` file.  So far `functions`, `workflows`, `triggers` and `tables` are supported and those should each be created in a file per, under each corresponding directory. `functions/reverse.ts` has a simple sample. After you create a new function or workflow make sure you add it to the `Project` object in `project.ts`. 
+This is our single file solution for creating small, simple projects directly in the `project.ts` file to keep everything visible at a glance. Any new `functions`, `workflows` or `triggers` changes to the variable names must be represented in the `Project` object.
 
 ## Setup
 
