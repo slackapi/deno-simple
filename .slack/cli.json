@@ -21,10 +21,6 @@
         "watcher": {
             "filter_regex": "^.*\\.ts$",
             "paths": [
-                "./workflows",
-                "./tables",
-                "./functions",
-                "./triggers",
                 "./project.ts"
             ]
         }
