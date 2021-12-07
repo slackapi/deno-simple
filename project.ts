@@ -15,15 +15,21 @@ const ReverseString = DefineFunction(
     title: "Reverse",
     description: "Takes a string and reverses it",
     input_parameters: {
-      stringToReverse: {
-        type: Schema.types.string,
-        description: "The string to reverse",
+      required: ["stringToReverse"],
+      properties: {
+        stringToReverse: {
+          type: Schema.types.string,
+          description: "The string to reverse",
+        },
       },
     },
     output_parameters: {
-      reverseString: {
-        type: Schema.types.string,
-        description: "The string in reverse",
+      required: ["reverseString"],
+      properties: {
+        reverseString: {
+          type: Schema.types.string,
+          description: "The string in reverse",
+        },
       },
     },
   },
@@ -44,13 +50,16 @@ export const ReverseEchoString = DefineWorkflow("reverse_echo", {
   title: "Reverse, echo",
   description: "Reverses a string, echos it out",
   input_parameters: {
-    stringToReverse: {
-      type: Schema.types.string,
-      description: "The string to reverse",
-    },
-    channel: {
-      type: Schema.slack.types.channel_id,
-      description: "Channel to echo the reversed string",
+    required: ["stringToReverse", "channel"],
+    properties: {
+      stringToReverse: {
+        type: Schema.types.string,
+        description: "The string to reverse",
+      },
+      channel: {
+        type: Schema.slack.types.channel_id,
+        description: "Channel to echo the reversed string",
+      },
     },
   },
 });
